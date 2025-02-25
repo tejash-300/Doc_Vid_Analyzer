@@ -75,7 +75,7 @@ The web interface will open in your browser.
 - Increase timeout settings for handling larger files (videos/PDFs)
 
 ## 🙌 Contributors
-- **[Your Name]** - Developer
+- **[Tejash pandey]** - Developer
 
 ## 📜 License
 MIT License © 2025. Free to use and modify for research and non-commercial projects.
