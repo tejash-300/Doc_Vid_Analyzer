@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+torch
+transformers
+sentence-transformers
+spacy
+pdfplumber
+moviepy
+librosa
+soundfile
+matplotlib
+numpy
+pyngrok
+requests
+streamlit
