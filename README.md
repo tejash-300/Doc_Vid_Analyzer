@@ -1,82 +1,95 @@
-# AI-Powered Legal & Video Assistant
+# Legal Document & Video Analyzer Frontend
 
-## 📌 Overview
-This project provides an AI-powered **Legal Document Analyzer**, **Video Content Analyzer**, and **Legal Chatbot** using FastAPI as the backend and Streamlit as the frontend. The system can:
-- Extract and summarize legal documents (PDFs)
-- Perform **legal risk assessment** with visualizations
-- Process **videos**, extract speech, and generate transcripts
-- Provide **AI-powered legal answers** using Falcon-7B
+This is the frontend for the AI-powered Legal Document & Video Analyzer project. It provides a user-friendly interface for analyzing legal documents and videos, extracting insights, and getting AI-powered answers to legal questions.
 
-## 🚀 Features
-- **📄 Legal Document Analysis:** Extracts text, summarizes content, and performs legal risk assessment.
-- **⚖️ Legal Risk Assessment:** Detects liability, termination clauses, indemnification, payment risks, and insurance risks.
-- **🎬 Video Content Analyzer:** Extracts audio from videos and performs speech-to-text conversion.
-- **🤖 AI Legal Chatbot:** Uses Falcon-7B for answering legal questions.
-- **🖥️ Web Interface:** Built using Streamlit.
+## Features
 
-## 🛠️ Tech Stack
-- **Backend:** FastAPI, Transformers, PyTorch, Spacy, Sentence-Transformers
-- **Frontend:** Streamlit
-- **Speech Processing:** Whisper (OpenAI)
-- **File Handling:** pdfplumber, moviepy, librosa
-- **Visualization:** Matplotlib
-- **Deployment:** Ngrok
+- **Document Analysis**: Upload and analyze legal documents (PDFs) to extract key information, identify risks, and generate summaries.
+- **Video Analysis**: Upload videos to transcribe speech and analyze the content for legal insights.
+- **Legal Q&A**: Ask questions about your analyzed documents and get AI-powered answers.
+- **Risk Visualization**: View interactive charts and visualizations of legal risks in your documents.
 
-## 📂 Project Structure
+## Technologies Used
+
+- **React**: Frontend framework
+- **Material UI**: Component library for modern UI design
+- **Axios**: HTTP client for API requests
+- **React Router**: For navigation between pages
+- **Chart.js**: For data visualization
+
+## Setup and Installation
+
+1. **Clone the repository**:
+   ```
+   git clone https://github.com/tejash-300/Doc_Vid_Analyzer.git
+   cd Doc_Vid_Analyzer
+   ```
+
+2. **Install dependencies**:
+   ```
+   cd frontend
+   npm install
+   ```
+
+3. **Configure the backend URL**:
+   - Open `src/config.js`
+   - Update the `API_BASE_URL` with your backend URL
+
+4. **Start the development server**:
+   ```
+   npm start
+   ```
+
+5. **Build for production**:
+   ```
+   npm run build
+   ```
+
+## Backend Connection
+
+This frontend connects to a FastAPI backend that provides the following services:
+- Document analysis (PDF)
+- Video analysis and transcription
+- Legal question answering
+- Risk visualization
+
+Make sure the backend is running and accessible at the URL specified in `src/config.js`.
+
+## Project Structure
+
 ```
-├── app.py                  # Backend API using FastAPI
-├── app_ui.py               # Streamlit frontend
-├── requirements.txt        # Required Python packages
-├── static/                 # Stores risk assessment charts
-└── README.md               # Project documentation
+frontend/
+├── public/              # Static files
+├── src/                 # Source code
+│   ├── components/      # Reusable UI components
+│   ├── pages/           # Page components
+│   ├── services/        # API services
+│   ├── config.js        # Configuration
+│   └── App.js           # Main application component
+└── README.md            # This file
 ```
 
-## ⚡ Installation & Setup
-### 1️⃣ Install Dependencies
-```bash
-pip install -r requirements.txt
-```
+## Usage
 
-### 2️⃣ Run Backend (FastAPI)
-```bash
-python app.py
-```
-FastAPI will be available at `http://localhost:8500`
+1. **Document Analysis**:
+   - Navigate to the Document Analyzer page
+   - Upload a PDF file
+   - View the summary, risk assessment, and visualizations
 
-### 3️⃣ Run Frontend (Streamlit UI)
-```bash
-streamlit run app_ui.py
-```
-The web interface will open in your browser.
+2. **Video Analysis**:
+   - Navigate to the Video Analyzer page
+   - Upload a video file
+   - View the transcript, summary, and risk assessment
 
-## 🔥 API Endpoints
-### 📄 Legal Document Analysis
-**POST /analyze_legal_document**
-- Input: PDF file
-- Output: Summary, Risk Analysis, Risk Chart
+3. **Legal Q&A**:
+   - Navigate to the Legal Q&A page
+   - Enter the Task ID from a previous analysis
+   - Ask legal questions about the document or video
 
-### 🎬 Video Analysis
-**POST /analyze_video**
-- Input: MP4, AVI, MOV file
-- Output: Speech-to-Text Transcript
+## License
 
-### 🤖 Legal Chatbot
-**POST /chatbot**
-- Input: User Query
-- Output: AI-generated legal response
-
-## 🔗 Deployment
-- **Ngrok Tunnel:** Required for exposing the API (`ngrok http 8500`)
-- **Cloud Deployment:** Can be hosted on AWS, GCP, or Azure
-
-## 📝 Notes
-- Ensure **GPU support** for better performance (especially for Whisper & Falcon-7B models)
-- Use **a valid ngrok URL** in `app_ui.py` before running Streamlit
-- Increase timeout settings for handling larger files (videos/PDFs)
-
-## 🙌 Contributors
-- **[Tejash pandey]** - Developer
-
-## 📜 License
 MIT License © 2025. Free to use and modify for research and non-commercial projects.
 
+## Credits
+
+Developed by Tejash Pandey
